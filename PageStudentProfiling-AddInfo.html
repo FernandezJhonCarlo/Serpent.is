@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    </head>
+    <body style="min-height: 400px;" onload="newStudent()">
+        <div class="title-bar">
+            <div class="btn-toggle-nav p-0"  onclick="toggleNav()"><img src="imgs/icon-menu.png" style="height:80%; width:80%;"></div>
+            <div class="seal-container"><img src="imgs/wmsu-seal.png"></div>
+            <div>Add Student</div>
+        </div>
+        <aside class="nav-sidebar">
+            <ul>
+                <li><span>menu</span></li>
+                <li><a href="PageIndex.html"><img src="imgs/icon-home.png">home</a></li>
+                <li><a href="PageStudentProfiling-Index.html"><img src="imgs/icon-student.png">profiling index</a></li>
+                <li><a href="PageGuidanceCounseling-Index.html"><img src="imgs/icon-counseling.png">counseling index</a></li>
+                <li><a href="PageSupport.html"><img src="imgs/icon-support.png">support</a></li>
+            </ul>
+        </aside>
+        <div class="main-page">
+            <div class="main-window" style="padding-top:0px; display:block">
+                <div class="window-content" style="height: 600px; flex-direction:column; justify-content:start; margin-bottom:30px; margin-top:30px;"> <!--height:600px;-->
+                    <form class="window-add">
+                        <div class="add-form" id="biographics">
+                            <span class="span-label"><label class="m-0">Student's basic information</label></span>
+                            <span id="first-span"><label>First Name</label>
+                            <input type="text" id="fname" name="firstname"></span>
+                            <span><label>Middle Name</label><input type="text" id="mname" name="middlenme"></span>
+                            <span><label>Last Name</label><input type="text" id="lname" name="lastname"></span>
+                            <span><label>Birthdate</label><input type="date" id="bdate" name="birthDate"></span>
+                            <span><label>Contact No.</label><input type="text" id="contact" name="contact"></span>
+                            <span class="span-button"><span style="flex:5%"></span><button type="button" class="form-nav-button" id="next-1">Next</button><span style="flex:5%"></span></span>
+                            <span style="height:40px; margin:0px"></span>
+                            <span class="addform-progressbar" style="height:20px; margin:0px;"><div class="addform-progress" style="width:20%;"></div></span>
+                        </div>
+                        <div class="add-form" id="address">
+                            <span class="span-label"><label class="m-0">Permanent Address</label></span>
+                            <span id="first-span"><label>Street</label><input type="text" id="mainAddress" name="street"></span>
+                            <span><label>Barangay</label><input type="text" id="mainAddress" name="barangay"></span>
+                            <span><label>City</label><input type="text" id="mainAddress" name="city"></span>
+                            <span><label>Province</label><input type="text" id="mainAddress" name="province"></span>
+
+                            <span>
+                                <label>Residency Type</label>
+                                <select name="isBoarder" id="isBoarder">
+                                    <option value="resident">Resident</option>
+                                    <option value="boarder">Boarder</option>                                                             
+                                    <option value="renting">Renting</option>
+                                </select>
+                            </span>
+
+                            <span id="boarderAddress" class="span-label"><label  class="m-0">Temporary Address</label></span>
+                            <span id="boarderAddress" ><label>Street</label><input type="text" name="boarderStreet"></span>
+                            <span id="boarderAddress"><label>Barangay</label><input type="text" name="boarderBarangay"></span>
+                            <span id="boarderAddress"><label>City</label><input type="text" name="boarderCity"></span>
+                            <span id="boarderAddress"><label>Province</label><input type="text" name="boarderProvince"></span>
+                            <span style="height:40px; margin:0px"></span>
+                            <span class="span-button">
+                                <span style="flex:5%"></span>
+                                <button type="button" class="form-nav-button" id="next-2">Next</button>
+                                <span style="flex:5%"></span>
+                                <button type="button" class="form-nav-button" id="prev-2">Previous</button>
+                                <span style="flex:5%"></span>                                
+                            </span>
+                            <span style="height:40px; margin:0px"></span>
+                            <span class="addform-progressbar" style="height:20px; margin:0px;"><div class="addform-progress" style="width:40%;"></div></span>
+                        </div>
+                        <div class="add-form" id="education">
+                            <span class="span-label"><label  class="m-0">Educational Information</label></span>
+                            <span id="first-span"><label>Student-ID</label><input type="text" id="studentId" name="studentId"></span>                            
+                            <span><label>College</label><input type="text" id="college" name="college"></span>   
+                            <span><label>Department</label><input type="text" id="department" name="department"></span>                          
+                            <span>
+                                <label>Year Level</label>
+                                <select name="level" id="level">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>                                                             
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </span>
+                            <span>
+                                <label>Student Status</label>
+                                <select name="studentStatus" id="studentStatus">
+                                    <option value="returning">Returning</option>
+                                    <option value="new">New</option>                                                             
+                                    <option value="shiftee">Shiftee</option>
+                                    <option value="transferee">Transferee</option>
+                                </select>
+                            </span>
+                            <span class="span-button">
+                                <span style="flex:5%"></span>
+                                <button type="button" class="form-nav-button" id="next-3">Next</button>
+                                <span style="flex:5%"></span>
+                                <button type="button" class="form-nav-button" id="prev-3">Previous</button>
+                                <span style="flex:5%"></span>                                
+                            </span>
+                            <span style="height:40px; margin:0px"></span>
+                            <span class="addform-progressbar" style="height:20px; margin:0px;"><div class="addform-progress" style="width:60%;"></div></span>                                                                             
+                        </div>
+                        <div class="add-form" id="personal-data">
+                            <span class="span-label"><label  class="m-0">Personal Information</label></span>
+                            <span id="first-span">
+                                <label>Sex</label>
+                                <select name="sex" id="sex">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                <label></label><label>Gender (optional)</label><input type="text" id="gender" name="gender">
+                            </span>
+                            <span>
+                                <label style="margin-right:5%;">Height</label>
+                                <label style="flex:2%; margin-right:1%;">ft.</label><input type="text" id="height" name="height" style="margin-right:1%;">
+                                <label style="flex:2%; margin-right:1%;">in.</label><input type="text" id="height" name="height" style="margin-right:5%;">
+                                <label style="flex:2%; margin-right:1%;">Weight kg.</label><input type="text" id="weight" name="weight">
+                            </span>
+                            <span><label>Complexion</label><input type="text" id="complexion" name="complexion"></span>
+                            <span><label>Ethnicity</label><input type="text" id="ethnicity" name="ethnicity"></span>
+                            <span><label>Nationality</label><input type="text" id="nationality" name="nationality"></span>
+                            <span><label>Religion</label><input type="text" id="religion" name="religion"></span>
+                            <span class="span-button">
+                                <span style="flex:5%"></span>
+                                <button type="button" class="form-nav-button" id="next-4">Next</button>
+                                <span style="flex:5%"></span>
+                                <button type="button" class="form-nav-button" id="prev-4">Previous</button>
+                                <span style="flex:5%"></span>
+                            </span>
+                            <span style="height:40px; margin:0px"></span>
+                            <span class="addform-progressbar" style="height:20px; margin:0px;"><div class="addform-progress" style="width:80%;"></div></span>
+                        </div>
+                        <div class="add-form" id="family">
+                            <span class="span-label"><label  class="m-0">Family Information</label></span>
+
+                            <span class="span-label"><label  class="m-0">Father</label></span>
+                            <span id="first-span"><label>Firstname</label><input type="text" id="fatherFirstname" name="fatherFirstname"></span>
+                            <span><label>Middlename</label><input type="text" id="fatherMiddlename" name="fatherMiddlename"></span>
+                            <span><label>Lastname</label><input type="text" id="fatherLastname" name="fatherLastname"></span>
+                            <span><label>Address</label><input type="text" id="fatherAddress" name="fatherAddress"></span>
+                            <span><label>Occupation</label><input type="text" id="fatherAddress" name="fatherAddress"></span>
+                            <span><label>Contact No.</label><input type="text" id="fatherContact" name="fatherContact"></span>
+
+                            <span class="span-label"><label  class="m-0">Mother</label></span>
+                            <span><label>Firstname</label><input type="text" id="motherFirstname" name="motherFirstname"></span>
+                            <span><label>Middlename</label><input type="text" id="motherMiddlename" name="motherMiddlename"></span>
+                            <span><label>Maiden Name</label><input type="text" id="motherMaidenName" name="motherMaidenName"></span>
+                            <span><label>Lastname</label><input type="text" id="motherLastname" name="motherLastname"></span>
+                            <span><label>Address</label><input type="text" id="motherAddress" name="motherAddress"></span>
+                            <span><label>Occupation</label><input type="text" id="motherAddress" name="motherAddress"></span>
+                            <span><label>Contact No.</label><input type="text" id="motherContact" name="motherContact"></span>
+
+                            <span class="span-label"><label  class="m-0">Guardian (Optional)</label></span>
+                            <span><label>Firstname</label><input type="text" id="guardianFirstname" name="guardianFirstname"></span>
+                            <span><label>Middlename</label><input type="text" id="guardianMiddlename" name="guardianMiddlename"></span>
+                            <span><label>Lastname</label><input type="text" id="guardianLastname" name="guardianLastname"></span>
+                            <span><label>Address</label><input type="text" id="guardianAddress" name="guardianAddress"></span>
+                            <span><label>Occupation</label><input type="text" id="guardianAddress" name="guardianAddress"></span>
+                            <span><label>Contact No.</label><input type="text" id="guardianContact" name="guardianContact"></span>
+                            <span>
+                                <label>Civil Status</label>
+                                <select name="civilStatus" id="civilStatus">
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                    <option value="divorced">Divorced</option>
+                                    <option value="separated">Separated</option>
+                                    <option value="Widowed">Widowed</option>
+                                </select>                                
+                            </span>
+                            <span id="spouseInfo" class="span-label"><label  class="m-0">Spouse</label></span>
+                            <span id="spouseInfo"><label>Firstname</label><input type="text" id="spouseFirstname" name="spouseFirstname"></span>
+                            <span id="spouseInfo"><label>Middlename</label><input type="text" id="spouseMiddlename" name="spouseMiddlename"></span>
+                            <span id="spouseInfo"><label>Maiden Name</label><input type="text" id="spouseMaidenName" name="spouseMaidenName"></span>
+                            <span id="spouseInfo"><label>Lastname</label><input type="text" id="spouseLastname" name="spouseLastname"></span>
+                            <span id="spouseInfo"><label>Address</label><input type="text" id="spouseAddress" name="spouseAddress"></span>
+                            <span id="spouseInfo"><label>Occupation</label><input type="text" id="spouseAddress" name="spouseAddress"></span>
+                            <span id="spouseInfo"><label>Contact No.</label><input type="text" id="spouseContact" name="spouseContact"></span>
+                            <span class="span-label"><label  class="m-0">Siblings</label><button class="sibling-button" type="button" id="addSibling">Add Sibling</button><label style="flex:1%"></label><button class="sibling-button" type="button" id="removeSibling">Remove Sibling</button></span>
+                            <!-- <span><label>Firstname</label><input type="text" id="siblingFirstname0" name="siblingLastname0"></span>
+                            <span><label>Middlename</label><input type="text" id="siblingMiddlename0" name="siblingMiddlename0"></span>
+                            <span><label>Lastname</label><input type="text" id="siblingLastname0" name="siblingFirstname0"></span>
+                            <span>
+                                <label>Sibling relation</label>
+                                <select name="siblingRelation0" id="siblingRelation0">
+                                    <option value="brother">Brother</option>
+                                    <option value="sister">Sister</option>
+                                </select>                                
+                            </span> -->
+                            <span class="span-button" id="nav-buttons">
+                                <span style="flex:5%"></span>
+                                <button type="submit" class="form-nav-button" style="flex:50%">Submit</button>
+                                <span style="flex:5%"></span>
+                                <button type="button" class="form-nav-button" id="prev-5">Previous</button>
+                                <span style="flex:5%"></span>
+                            </span>
+                            <span style="height:40px; margin:0px"></span>
+                            <span class="addform-progressbar" style="height:20px; margin:0px;"><div class="addform-progress" style="width:100%;"></div></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

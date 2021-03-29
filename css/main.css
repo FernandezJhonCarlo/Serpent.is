@@ -1,0 +1,761 @@
+html, body{
+    height:100%;
+    width:100%;
+    background-image: url('https://i.imgur.com/KCfCxxe.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 400px;
+    min-width: 400px;
+    margin:0px;
+}
+
+img{
+    height:100%;
+    width:100%;
+    object-fit: fill;
+}
+
+a {
+	text-decoration: none;
+    font-family:PT Sans;
+}
+
+.title-bar{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:60px;
+    background-color: white;
+    display:flex;
+    flex-wrap:nowrap;
+    z-index: 1000;
+    align-items: center;
+    object-fit: fill;
+    border-bottom:solid #521818 4px;
+    background-color: #FFEEEE;
+}
+
+.title-bar div{
+    padding-left: 0px;
+    display:flex;
+    flex-wrap:nowrap;
+    font-size:40px;
+    color:#521818;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.seal-container{
+    width:55px;
+    min-width:55px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.btn-toggle-nav{
+    width:60px;
+    min-width:60px;
+    height:100%;
+    background-color: #703535;
+    cursor:pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-toggle-nav img{
+    height:50%;
+    width:50%;
+}
+
+.btn-toggle-nav:hover{
+    opacity:0.5;
+}
+
+
+
+.nav-sidebar{
+    position:fixed;
+    left:0;
+    bottom:0;
+    padding: 0 5px;
+    width:60px;
+    height:calc(100vh - 60px);
+    background-color: #521818;
+    z-index:1000;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-sidebar ul{
+    padding-left:20px;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+.nav-sidebar ul li{
+    line-height: 60px;
+    list-style: none;
+}
+
+.nav-sidebar ul li a, .nav-sidebar ul li span{
+    line-height: 30px;
+    list-style: none;
+    display:block;
+    padding: 0 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family:arial;
+    font-size:16px;
+    font-weight:600;
+    color:white;
+    white-space:nowrap;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nav-sidebar ul li a img{
+    margin-left: 2px;
+    margin-right: 10px;
+    width: 15px;
+}
+
+@media (min-height: 400px) {
+    .nav-sidebar ul li a img{
+      width:35px;
+    }
+    .nav-sidebar ul li a, .nav-sidebar ul li span{
+        line-height: 60px;
+      }
+}
+
+.nav-sidebar ul li span{
+    font-size:20px;
+    color:pink;
+}
+
+.nav-sidebar ul li a:hover{
+    background-color: #583636;
+}
+
+.main-page{
+    width:100%;
+    height:100%;
+    padding-left:60px;
+    padding-top:60px;
+}
+
+.main-window{
+    overflow:auto;
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+
+.window-content{
+    background-color:#FFEEEE;
+    height:80%;
+    width:95%;
+    margin:auto;
+    border-radius:15px;
+    border:solid #583636 4px;
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: start;
+    overflow:auto;
+}
+
+.generic-button{
+    background-color: #583636;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border:solid black 2px;
+    border-radius: 15px;
+    font-size:15px;
+    font-weight:500;
+    margin:auto;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.generic-button:hover{
+    background-color: #854d4d;
+    color:rgb(255, 255, 255);
+}
+
+.button-add-index{
+    background-color: #583636;
+    border-radius:15px;
+    border:solid black 2px;
+    color:white;
+    height:70%;
+    width:35%;
+    margin-right:5%;
+    display:flex;
+    justify-content: center;
+    text-decoration: none;
+    padding:3px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.button-add-index p{
+    margin:0px;
+    justify-content: center;
+    display:flex;
+    align-items:center;
+    display:none;
+}
+
+@media (min-width: 766px) {
+    .button-add-index p{
+      display:flex;
+      font-size:30px;
+    }
+}
+
+.button-add-index img{
+    height:20vh;
+    width:50%;
+    min-height:0px;
+    min-width:0px;
+    object-fit: contain;
+}
+
+.button-add-index:hover{
+    background-color: #9c4444;
+    color:white;
+}
+
+/* Login Page */
+
+.login-container {  
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    height:100%;
+    font-size:20px;
+}
+
+.logo-container{
+	display:flex;
+	flex:70%;
+	height:100%;
+	padding: 0px;
+    margin:0px;
+	justify-content: center;
+	align-items: center;
+	flex-shrink:8;
+}
+
+.login-seal-container{
+	display:flex;
+	margin: auto;
+	height:75%;
+	width: 45%;
+	padding: 0px;
+    padding-top:10px;
+	border-radius:68px;
+	background: rgba(82,24,24,0.8);
+	justify-content: center;
+    align-items: center;
+	flex-direction:column;
+	object-fit:contain;
+	min-width:300px;
+}
+
+.login{
+	display:flex;
+	flex:30%;
+	background: rgba(82,24,24);
+	border-radius: 64px 0px 0px 64px;
+	padding: 0px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-width: 310px;
+}
+
+.text-container{
+	white-space:nowrap;
+	font-size:20px;
+	display:flex;
+	flex:60%;
+	width:100%;
+	margin: auto;
+	padding:0px;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	min-width:280px;
+}
+
+.signintextbox{
+	width: 70%;
+	min-width: 200px;
+	height: 40px;
+	border: 1px solid black; 
+	display: inline;
+}
+
+/* Modal CSS */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    align-items: center;
+}
+
+.modal-window{
+    background-color:#FFEEEE;
+    height:80%;
+    width:80%;
+    margin:auto;
+    margin-top: auto;
+    margin-bottom:auto;
+    border-radius:15px;
+    border:solid #583636 2px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-column{
+    background-color:#521818;
+    height:95%;
+    border-radius:10px;
+    color:white;
+}
+
+.fixed-column{
+    -ms-flex: 0 0 120px !important;
+    flex: 0 0 120px !important;
+}
+
+/* Guidance - Index */
+
+.index-container{
+    margin:0px;
+    height:100%; 
+    padding:10px; 
+    flex:35%;
+    display:flex;
+    flex-direction: column;
+}
+
+.index-container div{
+    width:100%;
+    background-color:#521818;
+    border-radius:10px;
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+}
+
+.index-container div p{
+    font-size:25px;
+    color:white;
+    padding:10px;
+    width:95%;
+}
+
+.notification-container{
+    background-color:white !important;
+    width:95%;
+    padding:5px;
+}
+
+.notification-container div{
+    border-radius:15px;
+    background-color:white;
+    margin-top:5px;
+    margin-bottom:5px;
+    width:100%;
+    height:200px;
+    border:solid black 1px;
+    box-shadow: 2px 5px 10px grey;
+    padding:10px;
+    padding-top:1px;
+    padding-bottom:1px;
+    white-space: nowrap;
+    overflow:auto;
+}
+
+.notification-container div h1{
+    font-size: 30px;
+}
+
+.notification-container div h2{
+    font-size: 20px;
+}
+
+/* Add Form */
+
+.window-add{
+    display:flex;
+    height:100%;
+    width:80%;
+    padding:8px;
+    align-items: center;
+    justify-content:center;
+}
+
+.add-form{
+    display:flex;
+    flex-direction:column;
+    align-items:left;
+    justify-content:center;
+    height:100%;
+    width:80%;
+}
+
+.add-form span{
+    display:flex;
+    width:100%;
+}
+
+.add-form span input, .add-form span select{
+    flex:70%;
+    min-width: 0;
+}
+
+.add-form span label{
+    margin-right:5%;
+    flex:30%;
+    white-space: nowrap;
+    font-size:15px;
+}
+
+.register-form span label{
+    font-size:20px;
+    white-space: normal;
+}
+
+#first-span{
+    margin:0;
+}
+
+.span-button{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.form-nav-button, .sibling-button{
+    background-color: #583636;
+    width:40%;
+    height:50px;
+    color:white;
+    border:solid black 2px;
+    border-radius: 15px;
+    font-size:15px;
+    flex:25%;
+    margin:auto;
+}
+
+.form-nav-button:hover, .sibling-button:hover{
+    opacity:0.5;
+}
+
+.span-label{
+    font-size:25px;
+}
+
+#next-1{
+    flex:none;
+    margin-right:3%
+}
+
+.add-form span{
+    margin-top:1%;
+    height:60px;
+}
+
+.addform-progressbar{
+    height:20px;
+    width:100%;
+    background-color:white;
+    border:solid black 3px;
+    border-radius:40px;
+    display:block;
+}
+
+.addform-progress{
+    background-color:#521818;
+    border-radius:40px;
+}
+
+#address, #education, #personal-data, #family{
+    height:0%;
+    width:0%;
+    visibility:hidden;
+    display:none;
+}
+
+.blankline{
+    height:5px;
+}
+
+#boarderAddress, #spouseInfo{
+    visibility:hidden;
+    display:none;
+}
+
+@media (min-width: 1120px) and (min-height: 579px){
+    .add-form span label{
+        font-size:35px;
+    }
+    .register-form span label{
+        font-size:20px;
+    }
+}
+
+@media (min-height:579px){
+    .add-form span{
+        margin-top:10px;
+    }
+}
+
+/* View List */
+
+.sort-buttons{
+    width:95%;
+    flex:20%;
+    padding:5px;
+}
+
+.sort-buttons div{
+    height:33%;
+}
+
+.sort-buttons div span{
+    height:100%;
+}
+
+.list-window{
+    width:95%;
+    flex:70%;
+    background-color: white;
+    border-radius: 10px;
+    border:solid #521818 2px;
+    overflow:auto;
+
+}
+
+.list-table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:2px;
+}
+
+.list-table tr{
+    height:30px;
+    padding:0px;
+}
+
+.list-table tr td{
+    padding:0px;
+    text-align: center;
+}
+
+.date{
+    width:15%;
+}
+
+.time{
+    width:10%;
+}
+
+.counselor{
+    width: 20%;
+}
+
+.teacher, .student{
+    width:20%;
+    visibility:hidden;
+    display:none;
+}
+
+input.search{
+    width:30%;
+}
+
+@media (min-width:700px){
+    .teacher, .student{
+        visibility:visible;
+        display:table-cell;
+    }
+}
+
+.status{
+    width:10%;
+}
+
+.list-label{
+    border:solid black 2px;
+}
+
+.list-button{
+    flex:10%;
+    width:95%;
+    display:flex;
+    flex-direction:row;
+}
+
+.list-button button{
+    flex:25%;
+}
+
+/* View Calendar */
+
+.list-span{
+    width:100%;
+    flex:70%;
+    display:flex;
+}
+
+.calendar-container{
+    height:100%;
+    flex:70%;
+    margin:0px;
+}
+
+ul, ol{
+    list-style-type: none;
+}
+
+.calendar-month{
+    position:relative;
+    background-color: white;
+    height:100%;
+    border:solid black 2px;
+    border-radius: 10px;
+}
+
+.calendar-month-header{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+}
+
+.calendar-month-header-selected-month{
+    font-size:20px;
+    font-weight: 500;
+}
+
+.calendar-month-header-selectors{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:80px;
+}
+
+.calendar-month-header-selectors > *{
+    cursor:pointer;
+}
+
+.day-of-week{
+    font-size:18px;
+    padding-bottom:3px;
+    padding-top:7px;   
+}
+
+.day-of-week, .days-grid{
+    padding-left:0px;
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day-of-week > *{
+    text-align: right;
+    padding-right: 4px;    
+}
+
+.days-grid{
+    height:75%;
+    position:relative;
+    /*grid-column-gap: var(--grid-gap);*/
+    /*grid-row-gap: var(--grid-gap);*/
+    border-top:solid 1px grey;
+    background-color:lightgrey;
+}
+
+.calendar-day{
+    position:relative;
+    /*min-height:70px;*/
+    font-size:13px;
+    background-color:#fff;
+    color:darkgrey;
+    padding:5px;
+    outline:solid grey 1px;
+}
+
+.calendar-day span {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    right:7px;
+    width:var(--day-label-size);
+    height:var(--day-label-size);
+}
+
+/* View Student */
+.student-id{
+    width:10%;
+    display:none;
+}
+
+.student-name{
+    width:15%;
+}
+
+.student-department{
+    width:15%;
+}
+
+.student-college{
+    width:15%;
+    display:none;
+}
+
+.student-level{
+    width:10%;
+}
+
+@media (min-width:700px){
+    .student-id, .student-college{
+        display:table-cell;
+    }
+}
+
+/* View Parent */
+.parent-name{
+    width:35%;
+}
+
+.parent-relationship{
+    width:30%;
+}
+
+.parent-student{
+    width:35%;
+}
+
+.buttons-container{
+    display:flex;
+    flex-direction:row-reverse;
+    padding:5px;
+}
